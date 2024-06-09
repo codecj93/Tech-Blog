@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User } = require('/Users/cjosephs93/Desktop/Bootcamp/challenges/Tech Blog/Tech-Blog/models');
 
 router.post('/', async (req, res) => {
   try {

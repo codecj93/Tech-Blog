@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { Blog, User, Comment } = require('../models');
-const withAuth = require('../utils/auth');
+const { Blog, User, Comment } = require('/Users/cjosephs93/Desktop/Bootcamp/challenges/Tech Blog/Tech-Blog/models');
+// const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
@@ -50,7 +50,8 @@ router.get('/comment/:id', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
+// router.get('/profile', withAuth, async (req, res) => {
+  router.get('/profile', async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
